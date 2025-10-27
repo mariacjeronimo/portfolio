@@ -1,0 +1,285 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.6;
+    background-color: #ecd1c6;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  /* Container de todos os links */
+/* Container de todos os links */
+.contact-links {
+
+    display: flex; /* Alinha os links lado a lado */
+    gap: 3px; /* Espaço entre os links */
+    margin-top: 20px; /* Espaço para separar dos cargos */
+
+} 
+
+/* Estilo geral para cada link (E-mail, LinkedIn, LASIGE) */
+.contact-link {
+    font-size: 1em;
+    font-weight: 500;
+    color: #333; /* Cor do texto padrão */
+    text-decoration: underline; /* FORÇA o sublinhado */
+    padding: 5px 10px;
+    border: 1px solid transparent; 
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+  
+}
+
+/* Efeito ao passar o rato (Hover) */
+.contact-link:hover {
+    color: #3D2645;
+    text-decoration-color: #3D2645; /* Cor de destaque ao sublinhado */
+}
+
+/* Opcional: Ajuste para os títulos de trabalho, se necessário */
+.job-titles {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 5px;
+}
+  
+  header .logo {
+    font-size: 2.3em;
+    font-weight: 1000;
+    color: #3D2645;
+    
+  }
+  header .about{
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #3D2645;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #3D2645;
+    font-weight: 700;
+    margin-left: 20px;
+  }
+  
+  main {
+    padding: 40px;
+  }
+  
+  .intro {
+
+    margin-bottom: 40px;
+  }
+  .hero-section-layout {
+    display: grid;
+    /* Define duas colunas: a primeira (texto) usa o que precisa, 
+       a segunda (imagem) usa o que sobra ou a mesma largura (1fr) */
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; /* Espaço entre as colunas */
+    align-items: center; /* Centraliza verticalmente o texto e a imagem */
+    max-width: 1000px; /* Limite de largura para o layout */
+    margin: 0 auto 40px auto; /* Centraliza horizontalmente e adiciona margem inferior */
+    padding: 20px;
+}
+
+
+
+/* Estilo para a imagem de perfil */
+.me {
+    /* Garante que o contentor da imagem ocupa a coluna 2 e está alinhado */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem na sua coluna */
+}
+
+.profile-photo {
+    width: 100%; /* Ocupa 100% da largura da coluna */
+    max-width: 300px; /* Limita o tamanho máximo da foto (opcional, ajuste a gosto) */
+    height: auto;
+    border-radius:8px; /* Adiciona cantos arredondados, ou 50% para um círculo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma ligeira sombra */
+    aspect-ratio: 1 / 1; /* Garante que a foto é um quadrado, essencial para o border-radius: 50% funcionar bem */
+    object-fit: cover;
+}
+
+/* Media Query para ecrãs mais pequenos (a partir de ~768px, por exemplo) */
+@media (max-width: 768px) {
+    .hero-section-layout {
+        grid-template-columns: 1fr; /* Volta para uma única coluna */
+        gap: 20px;
+    }
+    
+    .intro {
+        /* Se quiser que o texto volte a centrar no modo de uma coluna: */
+        text-align: center; 
+    }
+    
+    /* Mova a imagem para cima do texto para ecrãs pequenos (opcional) */
+    .me {
+        order: -1; 
+    }
+}
+  
+  .intro h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+  
+  .projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .projeto {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .projeto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+/* Container que envolve toda a secção */
+.academic-path-container {
+    max-width: 800px; 
+    margin: 50px auto;
+    font-family: 'Roboto Slab', serif; /* Exemplo de fonte */
+}
+
+/* Estilo para cada linha do percurso académico */
+/* Estilo para cada linha do percurso académico (AGORA COM O RETÂNGULO E COR DE FUNDO) */
+.academic-entry {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; /* Garante que os itens são alinhados no topo */
+    
+    /* Propriedades do Retângulo */
+    border: 1px solid #ffffff; /* Borda um pouco mais suave/creme para combinar */
+    border-radius: 8px; /* Cantos arredondados */
+    padding: 15px 20px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaçamento entre os retângulos */
+    
+    /* NOVO: Cor de Fundo Branco-Creme/Suave */
+    background-color: #fff; /* Um branco muito suave com um toque creme/pêssego */
+    
+    /* Opcional: Adicionar uma ligeira sombra para profundidade */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 1. NOVO: Agrupa o Logo e o Curso/Instituição */
+.logo-course-group {
+    display: flex; /* Permite que o logo e o curso se alinhem lado a lado */
+    align-items: center; /* Alinha o logo e o texto verticalmente */
+    flex: 1; /* Permite que o grupo ocupe o espaço disponível */
+}
+
+/* Estilo para a imagem do Logo */
+.institution-logo {
+    width: 35px; /* Define o tamanho do logo */
+    height: 35px;
+    object-fit: contain; /* Garante que a imagem se ajusta sem distorção */
+    margin-right: 15px; /* Espaçamento entre o logo e o texto do curso */
+}
+
+/* Estilo para o texto do Curso/Instituição */
+.course-institution {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #333;
+    /* Remover flex: 1 daqui, pois já está no .logo-course-group */
+}
+
+/* Estilo para a Área de Foco / Certificado (o texto secundário) */
+.focus-area {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666; 
+    margin-top: 5px;
+}
+
+/* Estilo para as Datas (Corrigido para alinhamento à esquerda da coluna) */
+.duration {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left; 
+    color: #666;
+    min-width: 150px; 
+    margin-left: 20px; 
+}
+
+/* Remove a linha da última entrada */
+.academic-entry:last-child {
+    border-bottom: none;
+}
+
+.grade {
+    font-size: 14px;
+    font-weight: 700; /* Negrito */
+    line-height: 1.4;
+    color: #ffffff; /* Cor do texto: branco */
+    background-color: #3D2645; /* Cor do highlight: um cinzento escuro/quase preto */
+    padding: 3px 8px; /* Espaçamento interno (cima/baixo e lados) */
+    border-radius: 4px; /* Cantos ligeiramente arredondados para um look de marcador */
+    display: inline-block; /* Permite que o background se ajuste ao texto */
+    margin-top: 8px; /* Ajuste o espaçamento acima da nota conforme necessário */
+}
+
+
+.cedarville-cursive-regular {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .zalando-sans-semiexpanded {
+    font-family: "Zalando Sans SemiExpanded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-size: 1.2em;
+    font-style: normal;
+  }
+
+  .plant{
+    position: relative; 
+    
+    /* Move o elemento 20 pixels para baixo da sua posição original */
+    top: 35px;
+    width: 75px; 
+    height: auto;
+  }
