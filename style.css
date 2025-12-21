@@ -139,33 +139,58 @@
   }
   
   .projetos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 6rem; /* espaço em cima */
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 6rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
   
   .projeto {
-    background-color: #3d26452d;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
+  display: block; /* makes the anchor behave like a block */
+  background-color: rgba(61, 38, 69, 0.18); /* original color with transparency */
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  text-decoration: none; /* remove underline from link */
+  color: #333; /* text color */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.projeto:hover {
+  background-color: #eedbd3; /* more solid version of the same color */
+  transform: translateY(-5px); /* subtle lift effect */
+}
+
+.projeto img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.projeto h3, .projeto p {
+  margin: 0 0 8px 0;
+}
+
   
-  .projeto img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+
+  @media (max-width: 1024px) {
+  .projetos {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 640px) {
+  .projetos {
+    grid-template-columns: 1fr;
   }
-  
+}
+
 /* Container que envolve toda a secção */
 .academic-path-container {
     max-width: 1000px; 
@@ -296,4 +321,74 @@
 hr.linha{
   border: 2px solid #3d26452d;
   border-radius: 10px;
+}
+
+
+  footer {
+  background-color: #eedbd3;
+  padding: 80px 150px;
+}
+
+.grid_footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  row-gap: 60px;
+}
+
+/* Top left */
+.footer_title h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 48px;
+  color: #3D2645;
+  margin: 0;
+}
+
+/* Top right */
+.footer_contact {
+  justify-self: end;
+  text-align: left;
+  font-family: "Oswald", sans-serif;
+}
+
+/* Bottom left */
+.footer_meta {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Bottom right */
+.footer_socials {
+  justify-self: end;
+  display: flex;
+  gap: 24px;
+  font-size: 20px;
+}
+
+.footer_socials a {
+  color: #3D2645; /* any color you want */
+  font-size: 22px;
+  transition: transform 0.3s ease, color 0.3s ease; /* smooth animation */
+}
+
+.purple{
+  color: #3D2645;
+}
+
+.footer_socials a:hover {
+  color: #0077b5; /* LinkedIn blue for example */
+  transform: scale(1.2); /* slightly bigger on hover */
+}
+
+/* Optional: different colors for each platform */
+.footer_socials a[href*="linkedin"]:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.footer_socials a[href*="github"]:hover {
+  color: #e0b424; /* GitHub dark gray/black */
+}
+
+.footer_socials a[href*="mailto"]:hover {
+  color: #e74c3c; /* red for email */
 }
