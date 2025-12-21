@@ -208,8 +208,8 @@
     /* Propriedades do Retângulo */
     /*border: 1px solid #ffffff;  Borda um pouco mais suave/creme para combinar */
     border-radius: 8px; /* Cantos arredondados */
-    padding: 15px 20px; /* Espaçamento interno */
-    margin-bottom: 30px; /* Espaçamento entre os retângulos */
+    padding: 5px 10px; /* Espaçamento interno */
+    
     
     /* NOVO: Cor de Fundo Branco-Creme/Suave */
     /* background-color: #fff;  */
@@ -392,3 +392,44 @@ hr.linha{
 .footer_socials a[href*="mailto"]:hover {
   color: #e74c3c; /* red for email */
 }
+
+.files {
+  display: flex;
+  gap: 30px;
+  margin-left: 165px; /* aligns with Bachelor text */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
+}
+
+
+.file-item {
+  text-align: center; /* center text under image */
+  max-width: 200px; /* prevents it from looking too wide */
+  margin: 0; /* remove default margin from figure */
+}
+
+.file_config {
+ width: 110px;
+  height: 155px;
+  object-fit: cover;   /* crops instead of stretching */
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+
+.file-item figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+.file-item img.file_config {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.file-item img.file_config:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
