@@ -2,14 +2,15 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  margin-top: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .characteristic {
-  background-color: rgba(61, 38, 69, 0.18);
+  background-color: #eedbd3;
   border-radius: 9px;
   padding: 32px 20px;
   text-align: center;
@@ -71,3 +72,152 @@
   display: inline-block;        /* mantém centralização com text-align */
   object-fit: cover;            /* mantém proporção da imagem */
 }
+ul {
+  padding-left: 40px; /* varies by browser */
+}
+
+
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+.column {
+  background-color: #eedbd3;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.column h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3d2645;
+  margin-bottom: 1rem;
+}
+
+.column ul, ol{
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.column li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+.column1 img {
+  max-width: 380px;   /* make it smaller */
+  width: 100%;        /* responsive */
+  height: auto;       /* keep aspect ratio */
+  display: block;
+  margin: 0 auto;     /* center the image */
+  border-radius: 5%;
+}
+
+.participants-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.participants-table th,
+.participants-table td {
+  border: 1px solid #000;
+  padding: 6px;
+  vertical-align: top;
+}
+
+.participants-table th {
+  font-weight: bold;
+  text-align: center;
+}
+
+.participants-table caption {
+  caption-side: bottom;
+  margin-top: 1rem;
+}
+
+
+.participants-table {
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin: 0 auto;
+  max-width: 900px; /* optional */
+}
+
+.participants-table th,
+.participants-table td {
+  padding: 3px 8px;
+  line-height: 1.2;
+  background-color: #f2eef5;
+}
+
+.table-card {
+  background-color: #eedbd3;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden; /* keeps rounded corners clean */
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+
+.comp {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: #eedbd3;
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Spacing control */
+.card h2 {
+  margin-top: 0;
+}
+
+.card ol {
+  margin-bottom: 2rem;
+  padding-left: 1.4rem;
+}
+
+.stats {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  
+  padding-top: 1.5rem;
+}
+
+.stats li {
+  margin-bottom: 0.6rem;
+}
+
+.img_center {
+  display: flex;
+  justify-content: center; /* centers the image horizontally */
+  margin: 2rem 0; /* spacing above and below */
+  width: 100%; /* full width of the parent so centering works */
+}
+
+.img_center img {
+  width: 400px; /* controls the size of the image */
+  max-width: 100%; /* ensures it doesn’t overflow on small screens */
+  height: auto; /* keeps aspect ratio */
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+  padding: 1rem;
+  background-color: #eedbd3;
+}
+
+
