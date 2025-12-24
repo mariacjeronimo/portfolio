@@ -181,43 +181,6 @@ ul {
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* Spacing control */
-.card h2 {
-  margin-top: 0;
-}
 
-.card ol {
-  margin-bottom: 2rem;
-  padding-left: 1.4rem;
-}
-
-.stats {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-  
-  padding-top: 1.5rem;
-}
-
-.stats li {
-  margin-bottom: 0.6rem;
-}
-
-.img_center {
-  display: flex;
-  justify-content: center; /* centers the image horizontally */
-  margin: 2rem 0; /* spacing above and below */
-  width: 100%; /* full width of the parent so centering works */
-}
-
-.img_center img {
-  width: 400px; /* controls the size of the image */
-  max-width: 100%; /* ensures it doesn’t overflow on small screens */
-  height: auto; /* keeps aspect ratio */
-  border-radius: 20px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-  padding: 1rem;
-  background-color: #eedbd3;
-}
 
 
