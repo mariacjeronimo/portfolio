@@ -148,23 +148,32 @@ ul {
   font-size: 0.85rem;
   margin: 0 auto;
   max-width: 900px; /* optional */
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+  
+  
 }
 
-.participants-table th,
+.participants-table th{
+  padding: 3px 8px;
+  line-height: 1.2;
+  background-color: #d6bfb3;; /* soft header color */
+}
 .participants-table td {
   padding: 3px 8px;
   line-height: 1.2;
-  background-color: #f2eef5;
+  background-color: #eedbd3;
+  
 }
 
+
 .table-card {
-  background-color: #eedbd3;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  background: #eedbd3; 
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
   overflow: hidden; /* keeps rounded corners clean */
-  margin: 2rem auto;
-  max-width: 900px;
+  margin: 1rem auto;
+  max-width: 800px;
 }
 
 
@@ -202,22 +211,91 @@ ul {
 .stats li {
   margin-bottom: 0.6rem;
 }
-
-.img_center {
-  display: flex;
-  justify-content: center; /* centers the image horizontally */
-  margin: 2rem 0; /* spacing above and below */
-  width: 100%; /* full width of the parent so centering works */
+.text-image-container {
+  display: flex;            /* side-by-side layout */
+  align-items: flex-start;  /* top-align text and image */
+  gap: 2rem;                /* space between text and image */
+  flex-wrap: wrap;          /* allow wrapping on small screens */
 }
 
-.img_center img {
-  width: 400px; /* controls the size of the image */
-  max-width: 100%; /* ensures it doesn’t overflow on small screens */
-  height: auto; /* keeps aspect ratio */
+.text-content {
+  flex: 1;                  /* text takes remaining space */
+  min-width: 250px;         /* prevent text from shrinking too much */
+}
+
+.image-content img {
+  width: 400px;             /* image size */
+  max-width: 100%;          /* responsive */
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
   padding: 1rem;
   background-color: #eedbd3;
 }
 
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .text-image-container {
+    flex-direction: column; /* stack text above image */
+    align-items: center;    /* center contents */
+  }
 
+  .image-content img {
+    width: 100%;            /* image fills container */
+    max-width: 400px;       /* but doesn’t get too big */
+  }
+
+  .text-content {
+    text-align: center;     /* optional: center text */
+  }
+}
+
+
+.chart-card {
+  background: #eedbd3; 
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+  max-width: 700px;
+  margin: 3rem auto;
+}
+
+.chart h3 {
+  margin-top: 0;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 30px;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.80rem;
+}
+
+.bar {
+  height: 14px;
+  background: #8b5cf6;
+  border-radius: 8px;
+  width: calc((var(--value) / 9) * 100%); /* 9 = max value */
+  min-width: 1px; /* prevents disappearing */
+}
+
+.row em {
+  font-style: normal;
+  font-weight: bold;
+}
+.data-layout {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr; /* table wider than chart */
+  gap: 1rem;
+   width: 95%;         /* almost full width */
+  max-width: 1600px;  /* wider limit */
+  margin: 2rem auto;
+  align-items: start;
+}
