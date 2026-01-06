@@ -299,3 +299,14 @@ ul {
   margin: 2rem auto;
   align-items: start;
 }
+
+.image-content2 img {
+  width: 500px;             /* image size */
+  max-width: 100%;          /* responsive */
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+  padding: 1rem;
+  background-color: #eedbd3;
+  
+}
