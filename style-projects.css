@@ -10,7 +10,7 @@
 }
 
 .characteristic {
-  background-color: #eedbd3;
+  background-color: #ffefe8;
   border-radius: 9px;
   padding: 32px 20px;
   text-align: center;
@@ -86,7 +86,7 @@ ul {
   padding: 0 2rem;
 }
 .column {
-  background-color: #eedbd3;
+  background-color: #ffefe8;
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
@@ -148,7 +148,6 @@ ul {
   font-size: 0.85rem;
   margin: 0 auto;
   max-width: 900px; /* optional */
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
   
   
 }
@@ -167,7 +166,7 @@ ul {
 
 
 .table-card {
-  background: #eedbd3; 
+  background: #ffefe8; 
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
@@ -184,7 +183,7 @@ ul {
 }
 
 .card {
-  background-color: #eedbd3;
+  background-color: #ffefe8;
   border-radius: 20px;
   padding: 2.5rem 3rem;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
@@ -230,7 +229,7 @@ ul {
   border-radius: 20px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
   padding: 1rem;
-  background-color: #eedbd3;
+  background-color: #ffefe8;
 }
 
 /* Responsive for smaller screens */
@@ -252,7 +251,7 @@ ul {
 
 
 .chart-card {
-  background: #eedbd3; 
+  background: #ffefe8; 
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
@@ -307,6 +306,12 @@ ul {
   border-radius: 20px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
   padding: 1rem;
-  background-color: #eedbd3;
+  background-color: #ffefe8;
+  
+}
+
+main{
+  margin-right: 200px;
+  margin-left: 200px;
   
 }
